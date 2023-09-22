@@ -20,19 +20,26 @@ public class DeliveryBaseVisitor<T> extends AbstractParseTreeVisitor<T> implemen
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitProg(DeliveryParser.ProgContext ctx) { return visitChildren(ctx); }
+	@Override public T visitStart(DeliveryParser.StartContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitDecl(DeliveryParser.DeclContext ctx) { return visitChildren(ctx); }
+	@Override public T visitFunction(DeliveryParser.FunctionContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitExpr(DeliveryParser.ExprContext ctx) { return visitChildren(ctx); }
+	@Override public T visitExp(DeliveryParser.ExpContext ctx) { return visitChildren(ctx); }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	@Override public T visitCond(DeliveryParser.CondContext ctx) { return visitChildren(ctx); }
 }

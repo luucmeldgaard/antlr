@@ -12,7 +12,7 @@ public class Delivery {
     public static void main(String[] args) {
         try {
             // Read the input file
-            CharStream input = CharStreams.fromFileName("src/tests/test1.txt");
+            CharStream input = CharStreams.fromFileName("src/tests/trafiklys1.hw");
 
             // Create a lexer
             DeliveryLexer lexer = new DeliveryLexer(input);
@@ -24,7 +24,7 @@ public class Delivery {
             DeliveryParser parser = new DeliveryParser(tokens);
 
             // Start parsing at the `prog` rule
-            ParseTree tree = parser.prog();
+            ParseTree tree = parser.function();
 
             // Do something with the parse tree (e.g., print it)
             System.out.println(tree.toStringTree(parser));

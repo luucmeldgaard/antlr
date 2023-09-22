@@ -10,33 +10,43 @@ import org.antlr.v4.runtime.tree.ParseTreeListener;
  */
 public interface DeliveryListener extends ParseTreeListener {
 	/**
-	 * Enter a parse tree produced by {@link DeliveryParser#prog}.
+	 * Enter a parse tree produced by {@link DeliveryParser#start}.
 	 * @param ctx the parse tree
 	 */
-	void enterProg(DeliveryParser.ProgContext ctx);
+	void enterStart(DeliveryParser.StartContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DeliveryParser#prog}.
+	 * Exit a parse tree produced by {@link DeliveryParser#start}.
 	 * @param ctx the parse tree
 	 */
-	void exitProg(DeliveryParser.ProgContext ctx);
+	void exitStart(DeliveryParser.StartContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DeliveryParser#decl}.
+	 * Enter a parse tree produced by {@link DeliveryParser#function}.
 	 * @param ctx the parse tree
 	 */
-	void enterDecl(DeliveryParser.DeclContext ctx);
+	void enterFunction(DeliveryParser.FunctionContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DeliveryParser#decl}.
+	 * Exit a parse tree produced by {@link DeliveryParser#function}.
 	 * @param ctx the parse tree
 	 */
-	void exitDecl(DeliveryParser.DeclContext ctx);
+	void exitFunction(DeliveryParser.FunctionContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link DeliveryParser#expr}.
+	 * Enter a parse tree produced by {@link DeliveryParser#exp}.
 	 * @param ctx the parse tree
 	 */
-	void enterExpr(DeliveryParser.ExprContext ctx);
+	void enterExp(DeliveryParser.ExpContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link DeliveryParser#expr}.
+	 * Exit a parse tree produced by {@link DeliveryParser#exp}.
 	 * @param ctx the parse tree
 	 */
-	void exitExpr(DeliveryParser.ExprContext ctx);
+	void exitExp(DeliveryParser.ExpContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link DeliveryParser#cond}.
+	 * @param ctx the parse tree
+	 */
+	void enterCond(DeliveryParser.CondContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link DeliveryParser#cond}.
+	 * @param ctx the parse tree
+	 */
+	void exitCond(DeliveryParser.CondContext ctx);
 }

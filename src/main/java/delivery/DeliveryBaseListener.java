@@ -19,37 +19,49 @@ public class DeliveryBaseListener implements DeliveryListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterProg(DeliveryParser.ProgContext ctx) { }
+	@Override public void enterStart(DeliveryParser.StartContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitProg(DeliveryParser.ProgContext ctx) { }
+	@Override public void exitStart(DeliveryParser.StartContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterDecl(DeliveryParser.DeclContext ctx) { }
+	@Override public void enterFunction(DeliveryParser.FunctionContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitDecl(DeliveryParser.DeclContext ctx) { }
+	@Override public void exitFunction(DeliveryParser.FunctionContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterExpr(DeliveryParser.ExprContext ctx) { }
+	@Override public void enterExp(DeliveryParser.ExpContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitExpr(DeliveryParser.ExprContext ctx) { }
+	@Override public void exitExp(DeliveryParser.ExpContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterCond(DeliveryParser.CondContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitCond(DeliveryParser.CondContext ctx) { }
 
 	/**
 	 * {@inheritDoc}

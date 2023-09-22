@@ -13,21 +13,27 @@ import org.antlr.v4.runtime.tree.ParseTreeVisitor;
  */
 public interface DeliveryVisitor<T> extends ParseTreeVisitor<T> {
 	/**
-	 * Visit a parse tree produced by {@link DeliveryParser#prog}.
+	 * Visit a parse tree produced by {@link DeliveryParser#start}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitProg(DeliveryParser.ProgContext ctx);
+	T visitStart(DeliveryParser.StartContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link DeliveryParser#decl}.
+	 * Visit a parse tree produced by {@link DeliveryParser#function}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitDecl(DeliveryParser.DeclContext ctx);
+	T visitFunction(DeliveryParser.FunctionContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link DeliveryParser#expr}.
+	 * Visit a parse tree produced by {@link DeliveryParser#exp}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitExpr(DeliveryParser.ExprContext ctx);
+	T visitExp(DeliveryParser.ExpContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link DeliveryParser#cond}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitCond(DeliveryParser.CondContext ctx);
 }
