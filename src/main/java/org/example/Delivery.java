@@ -12,7 +12,7 @@ public class Delivery {
     public static void main(String[] args) {
         try {
             // Read the input file
-            CharStream input = CharStreams.fromFileName("src/tests/trafiklys1.hw");
+            CharStream input = CharStreams.fromFileName("src/tests/trafiklys2.hw");
 
             // Create a lexer
             DeliveryLexer lexer = new DeliveryLexer(input);
