@@ -22,16 +22,18 @@ function: '.hardware' IDENTIFIER
 
 exp_list: exp+;
 
-assign: (IDENTIFIER|exp) ('->' | '=') (IDENTIFIER|exp) ;
+exp:    term (assign (term|BINARY) | operator) term
 
-exp:    term (('||') (term|BINARY))*
-   |    term (('&&') (term|BINARY))* ;
+        ;
+
 term: '(' exp ')'
     | ('!')? IDENTIFIER  // atomic expression
     ;
 
 operator:   '||'
         |   '&&' ;
+
+assign: '->' | '=' ;
 
 /* Tokens */
 IDENTIFIER: [a-zA-Z][a-zA-Z0-9_]*;
